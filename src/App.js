@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import Toggle from './Toggle';
+import { useTitleInput } from './hooks/useTitleInput';
 
 const App = () => {
+  const [name, setName] = useTitleInput('')
 
   // const [value, setValue] = useState(initialState);
-  const [name, setName] = useState('');
+  // const [name, setName] = useState('');
 
   // Arrow function used because nothing is going to be automatically returned
-  useEffect(() => {
-    document.title = name;
-  });
+  // useEffect(() => {
+  //   document.title = name;
+  // });
 
   // e.preventDefault prevents the form from refreshing the page.
   return (
@@ -31,6 +33,8 @@ const App = () => {
     </div>
   );
 };
+
+
 
 export default App;
 
