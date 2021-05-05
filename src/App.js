@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useRef } from 'react';
 import Toggle from './Toggle';
 import { useTitleInput } from './hooks/useTitleInput';
 
 const App = () => {
   const [name, setName] = useTitleInput('')
+  const ref = useRef();
 
   // const [value, setValue] = useState(initialState);
   // const [name, setName] = useState('');
@@ -15,7 +16,7 @@ const App = () => {
 
   // e.preventDefault prevents the form from refreshing the page.
   return (
-    <div className="main-wrapper">
+    <div className="main-wrapper" ref={ref}>
       <h1>Level Up Dishes</h1>
       <Toggle />
       <form 
@@ -28,7 +29,7 @@ const App = () => {
         onChange={(e) => setName(e.target.value)}
         value={name}
         />
-        <button>Submit</button>
+        <button onClick={() => ref.current.classList.add('new-fake-class')}>Submit</button>
       </form>
     </div>
   );
