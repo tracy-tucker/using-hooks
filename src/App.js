@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Toggle from './Toggle';
 import { useTitleInput } from './hooks/useTitleInput';
 
+
 const App = () => {
   const [name, setName] = useTitleInput('')
   const ref = useRef();
