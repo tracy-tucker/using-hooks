@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Toggle from './Toggle';
 import { useTitleInput } from './hooks/useTitleInput';
+import Counter from './Counter';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
     <div className="main-wrapper" ref={ref}>
       <h1>Level Up Dishes</h1>
       <Toggle />
+      <Counter />
       <form 
         onSubmit={e => {
           e.preventDefault();
