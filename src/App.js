@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef } from 'react';
 import Toggle from './Toggle';
 import { useTitleInput } from './hooks/useTitleInput';
 
@@ -6,15 +6,6 @@ import { useTitleInput } from './hooks/useTitleInput';
 const App = () => {
   const [name, setName] = useTitleInput('')
   const ref = useRef();
-
-  const reverseWord = word => {
-    console.log('function called');
-    return word.split('').reverse().join('')
-  };
-
-  const title = 'Level Up Dishes'
-
-  const TitleReversed = useMemo(() => reverseWord(name), [name]);
 
   // const [value, setValue] = useState(initialState);
   // const [name, setName] = useState('');
@@ -27,7 +18,7 @@ const App = () => {
   // e.preventDefault prevents the form from refreshing the page.
   return (
     <div className="main-wrapper" ref={ref}>
-      <h1>{TitleReversed}</h1>
+      <h1>Level Up Dishes</h1>
       <Toggle />
       <form 
         onSubmit={e => {
