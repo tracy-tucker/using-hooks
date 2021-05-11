@@ -9,6 +9,7 @@ const App = () => {
   const [dishes, setDishes] = useState([]);
 
   const fetchDishes = async () => {
+    console.log('ran');
     const res = await fetch(
       'https://my-json-server.typicode.com/leveluptuts/fakeapi/dishes'
     );
@@ -17,8 +18,11 @@ const App = () => {
   }
 
   useEffect(() => {
-    //
-  });
+    fetchDishes();
+  }, [name]);
+  // blank array = runs this only on mount.
+  // turns this into a componentDidMount.
+  // if you pass in an object within the array, it will only trigger when that object is updated.
 
   // const [value, setValue] = useState(initialState);
   // const [name, setName] = useState('');
