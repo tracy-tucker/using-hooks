@@ -64,3 +64,5 @@ Click me
 To read the state, there is no need to use `this.state`
 
 `<p>You clicked {count} times</p>
+
+[GO HERE](https://stackblitz.com/edit/react-rgqjbf) for an example of using `useState`
