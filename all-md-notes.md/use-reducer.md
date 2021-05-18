@@ -9,7 +9,7 @@ It accepts a reducer of type `(state, action) => newState`, and returns the curr
 `reducer` is a function that returns some state data, triggered by an action `type`
 `action` is an object that tells the reducer how to change the state. It must contain a `type` property, and it can contain an optional `payload` property.
 
-`userReducer` is usually preferable to useState when you have complex state logic and involves multiple sub-values or when the next state depends on the previous one.
+`useReducer` is usually preferable to useState when you have complex state logic and involves multiple sub-values or when the next state depends on the previous one.
 
 Here is an example:
 
@@ -57,3 +57,5 @@ export default Counter;
 `useReducer` returns an array that holds the current state value and a `dispatch` function, to which you can pass an `action` and later invoke. This is similar to the pattern Redux uses but with a few differences.
 
 `useReducer` is limited to be within the component, unlike Redux, where the `dispatch` function sends the action object to the entire store.
+
+[GO HERE](https://stackblitz.com/edit/react-knbyfd) for a live working example.
