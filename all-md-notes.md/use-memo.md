@@ -44,3 +44,9 @@ With the above, we created a function to reverse a word/words, `reverseWord`. We
 Create `useMemo` within `TitleReversed`. `useMemo` is going to be an arrow function that we pass in the function we want to memoize the return value of, in this case is `reverseWord`. In order for `useMemo` to work, you need to tell `useMemo` what values to use it on (hence, the passing in of `title`), and also pass in an array of what values to CHECK, which is still `title`.
 What `useMemo` does, is it says "as long as this thing inside of the array is not changing, then we don't need to run the passed-in function."
 The array is required for `useMemo` to run, and you must be passing in the correct argument to the passed-in function.
+
+Here are some live working examples:
+
+[EXAMPLE ONE](https://stackblitz.com/edit/react-vgvpxj).
+[EXAMPLE TWO](https://stackblitz.com/edit/react-bzbraz).
+[EXAMPLE THEREE](https://stackblitz.com/edit/react-i9fa9e).

@@ -8,6 +8,7 @@
 So you would set up a typcial variable to store the incoming JSON data:
 
 ```
+const [dishes, setDishes] = useState([]);
 const fetchDishes = async () => {
     console.log('ran');
     const res = await fetch(
@@ -25,6 +26,8 @@ const fetchDishes = async () => {
     fetchDishes();
   }, [name]);
   ```
-  Passing in a blank array meants 'run this only on mount' It turns this into a `componentDidMount`.
+  Passing in a blank array means 'run this only on mount' It turns this into a `componentDidMount`.
   if you pass in an object within the array, it will only trigger a render when that object is updated.
+
+  [GO HERE](https://stackblitz.com/edit/react-df5lb1) for a live working example.
   

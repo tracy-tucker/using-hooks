@@ -127,3 +127,5 @@ function FriendStatus(props) {
 ```
 
 React performs the cleanup when the component unmounts. It also cleans up effects from the previous render before running effects next time.
+
+[GO HERE](https://stackblitz.com/edit/react-vgvpxj) for a live working example.
